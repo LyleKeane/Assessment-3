@@ -1,0 +1,98 @@
+<html>
+	<head>
+		<title>Shopping Cart System</title>
+		        <script>
+            
+            function addRow()
+            {
+                // get input values
+                var location = document.getElementById('location1').value;
+                 var item = document.getElementById('item').value;
+                  var buyDate = document.getElementById('buyDate').value;
+				   var cost = document.getElementById('cost').value;
+				    var buyTime = document.getElementById('buyTime').value;
+                  
+                  // get the html table
+                  // 0 = the first table
+                  var table = document.getElementsByTagName('table')[1];
+                  
+                  // add new empty row to the table
+                  // 1 = in the top 
+                  // table.rows.length = the end
+                  // table.rows.length/2+1 = the center
+                  var newRow = table.insertRow(table.rows.length/2+1);
+                  
+                  // add cells to the row
+                  var cel1 = newRow.insertCell(0);
+                  var cel2 = newRow.insertCell(1);
+                  var cel3 = newRow.insertCell(2);
+				  var cel4 = newRow.insertCell(3);
+				  var cel5 = newRow.insertCell(4);
+                  
+                  // add values to the cells
+                  cel1.innerHTML = location;
+                  cel2.innerHTML = buyDate;
+                  cel3.innerHTML = buyTime;
+				  cel4.innerHTML = item;
+				  cel5.innerHTML = cost;
+            }
+            
+        </script>
+	</head>
+	<body>
+		<div id='add_record'>
+		
+		<form action="">
+<h3 style="text-align: center;"><strong>Shopping cart system</strong></h3>
+<table style="background-color: silver; margin-left: auto; margin-right: auto;" width="523">
+<tbody>
+<tr>
+<td>Buyer from</td>
+<td><input name="location" type="radio" value="Toowoomba" id="location1" /> Toowoomba</td>
+<td><input name="location" type="radio" value="Australia" id="location2"/> Australia</td>
+<td><input name="location" type="radio" value="Overseas" id="location3" /> Overseas</td>
+</tr>
+<tr>
+<td>&nbsp;Items</td>
+<td><input name="item" type="text" value="" id="item" /></td>
+<td>&nbsp;Date</td>
+<td><input type="date" value="" id="buyDate" /></td>
+</tr>
+<tr>
+<td>&nbsp;Cost (AUD)</td>
+<td><input name="cost" type="number" value="" id="cost" /></td>
+<td>&nbsp;Time</td>
+<td><input type="time" value="" id="buyTime" /></td>
+</tr>
+</tbody>
+</table>
+		
+		</p>
+		</form>
+		</div>
+<p style="text-align: center;"><button onclick="addRow();">Add to Shopping record</button></p>
+		
+		
+		
+		<hr>
+		<div id='show_record'></div>
+<table border = "1" style="margin-left: auto; margin-right: auto;" width="570">
+<tbody>
+<tr>
+<td>Buyer location</td>
+<td>Date</td>
+<td>Time</td>
+<td>Item</td>
+<td>Cost</td>
+</tr>
+</tbody>
+</table>
+	
+		<script>
+	
+		//constants
+		const ABC = 5;
+
+		</script>
+	</body>
+</html>
