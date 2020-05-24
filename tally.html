@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<script>
+
+var shoppingRecordArr = [
+  ["Toowwomba", 25/12/2020, "sofa, sofa cover", 50],
+  ["Australia", 25/12/2020, "sofa, sofa cover", 50],
+  ["Overseas", 25/12/2020, "sofa, sofa cover", 50]
+  ];
+  
+
+function tallyRecords() {
+
+  
+  // dislpay location and coounting the number of records
+
+  for(var i=0; i<4; i++){
+    document.writeln('<tr><td>' + shoppingRecordArr[i] + '</td><td>' 
+      + searchCount(shoppingRecordArr[i], anArr) + '</td></tr>');
+  }
+  document.writeln('</table>');
+  
+  function searchCount(targetValue, arr){   
+    var count = 0; 
+      var i = 0;      
+      for(i=0; i<arr.length; i++){   
+      if(arr[i] == targetValue) 
+        count++;
+      }
+      return count;
+  }
+}
+  
+
+//summing the cost records
+
+    for(var i = 0; i < shoppingRecordArr.length; i++) {
+      var i = 0;
+      var sum = 0;
+       sum +=
+}
+
+ 
+    
+  </script>
+
+<body>
+
+  <p style="text-align: center;"><button onclick="tallyRecord();">Summary</button></p> 
+
+</body>
+
+
+</html>
+
+
